@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 100px auto;
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+        }
+
+        .small {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            border: 1px solid red;
+            line-height: 40px;
+        }
+
+        .small span {
+            text-align: center;
+            width: 100%;
+            height: 40px;
+            border: 1px solid red;
+        }
+
+        .color {
+            background-color: red;
+        }
+
+        ul li {
+            list-style: none;
+            display: none;
+            font-size: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="small">
+            <span class="color"> 我是帅哥1</span>
+            <span> 我是帅哥2</span>
+            <span> 我是帅哥3</span>
+            <span> 我是帅哥4</span>
+        </div>
+
+        <ul>
+            <li style="display:block">111</li>
+            <li>222</li>
+            <li>333</li>
+            <li>444</li>
+        </ul>
+    </div>
+</body>
+<script>
+    let boxEle = document.querySelector('.box')
+    let smallEle = document.querySelector('.small')
+    let spanEle = document.querySelectorAll('span')
+    let liEle = document.querySelectorAll('li')
+
+
+    smallEle = addEventListener('click', function (e) {
+        for (let i = 0; i < spanEle.length; i++) {
+            spanEle[i].setAttribute('index', i)
+        }
+        index = e.target.getAttribute('index')
+        console.log(index);
+        if (e.target.nodeName === 'SPAN') {
+            removeFun()
+            e.target.classList.add('color')
+            removecon()
+        }
+    })
+
+    function removeFun() {
+        for (let i = 0; i < spanEle.length; i++) {
+            spanEle[i].classList.remove('color')
+        }
+    }
+    function removecon() {
+        for (let i = 0; i < liEle.length; i++) {
+            liEle[i].style.display = 'none'
+        }
+        liEle[index].style.display = 'block'
+    }
+</script>
+
+</html>

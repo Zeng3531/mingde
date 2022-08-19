@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>试学用户申请信息</title>
+    <style>
+        div {
+            width: 600px;
+            height: 30px;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        table thead tr th {
+            padding: 10px;
+            background-color: #4465a2;
+            color: #fff;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        table {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>联系方式</th>
+                <th>申请时间</th>
+            </tr>
+        </thead>
+        {{each arr item}}
+        <tbody>
+            <tr>
+                <th>{{item.id}}</th>
+                <th>{{item.IPhone}}</th>
+                <th>{{item.data}}</th>
+            </tr>
+        </tbody>
+        {{/each}}
+    </table>
+    
+
+
+   
+</body>
+<script>
+    let bg = document.querySelectorAll("table tbody tr")
+    for(let i = 0; i < bg.length; i++) {
+        if(i % 2 ==0) {
+            bg[i].style.backgroundColor = "#f5f7fa"
+        }else {
+            bg[i].style.backgroundColor = "#fff"
+        }
+    }
+</script>
+</html>

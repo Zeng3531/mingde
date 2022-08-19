@@ -1,0 +1,54 @@
+/* 样式重置 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f3f5f7;
+    /* height: 1500px; */
+}
+
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+} 
+
+input , button {
+    outline: 0;
+    border: 0;
+}
+
+/* 定义一些公共类 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+ /* 两行显示省略号 */
+ .text-ellipsisl2{
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    /*弹性伸缩盒子模型显示*/
+    display:-webkit-box;
+
+    /*限制在一个块元素显示的文本的行数*/
+    -webkit-line-clamp:2;
+
+    /*设置或检索伸缩盒对象的子元素的排列方式*/
+    -webkit-box-orient:vertical;
+}
+body {
+    font: 12px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+}
